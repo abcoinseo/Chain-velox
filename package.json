@@ -1,14 +1,10 @@
 {
-  "name": "velox-chain",
+  "name": "velox-hardhat",
   "private": true,
   "scripts": {
-    "start": "node server.js"
+    "start": "npx hardhat node --hostname 0.0.0.0 --port 3000"
   },
-  "dependencies": {
-    "express": "^4.19.2",
-    "ethers": "^6.13.2",
-    "hardhat": "^2.22.0",
-    "@nomicfoundation/hardhat-toolbox": "^3.0.0",
-    "@openzeppelin/contracts": "^5.0.2"
+  "devDependencies": {
+    "hardhat": "^2.22.0"
   }
 }
