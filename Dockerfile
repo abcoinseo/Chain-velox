@@ -1,4 +1,4 @@
-FROM ethereum/client-go:stable
+FROM ethereum/client-go:v1.13.15
 
 WORKDIR /velox
 
@@ -11,7 +11,7 @@ if [ ! -d /velox/data/geth ]; then \
   echo 'Init VELOX genesis'; \
   geth --datadir /velox/data init /velox/genesis.json; \
 fi && \
-echo 'Starting VELOX Chain' && \
+echo 'Starting VELOX Chain (PoA)'; \
 exec geth \
   --datadir /velox/data \
   --networkid 185912 \
