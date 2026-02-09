@@ -1,0 +1,13 @@
+<h2>VELOX Explorer</h2>
+<button onclick="load()">Load Blocks</button>
+<pre id="out"></pre>
+<script>
+async function load(){
+ const b=await fetch("/",{
+  method:"POST",
+  headers:{"content-type":"application/json"},
+  body:JSON.stringify({jsonrpc:"2.0",method:"eth_blockNumber",params:[],id:1})
+ });
+ document.getElementById("out").innerText=JSON.stringify(await b.json(),null,2);
+}
+</script>
