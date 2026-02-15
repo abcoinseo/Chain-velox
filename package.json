@@ -1,14 +1,9 @@
 {
   "name": "velox-hardhat",
   "private": true,
-  "version": "1.0.0",
-  "description": "VELOX Hardhat RPC Node",
-  "main": "server.js",
   "scripts": {
-    "start": "node server.js",
-    "rpc": "npx hardhat node --hostname 0.0.0.0 --port 8545"
+    "start": "npx hardhat node --hostname 0.0.0.0 --port 8545"
   },
-  "dependencies": {},
   "devDependencies": {
     "hardhat": "^2.22.0"
   }
